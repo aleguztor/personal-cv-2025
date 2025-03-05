@@ -1,6 +1,14 @@
+// import Aos from "aos";
+// import "aos/dist/aos.css";
+// import { useEffect } from "react";
 import styles from "./App.module.css";
+import { PersonalProjects } from "./components/PersonalProjects";
 
+import { Works } from "./components/works";
 function App() {
+  // useEffect(() => {
+  //   Aos.init();
+  // });
   return (
     <>
       <div className={styles.auroraImageContainer} />
@@ -20,8 +28,9 @@ function App() {
           equipos y proyectos en los que participo.
         </p>
       </header>
-      <main>
-        <section></section>
+      <main className={styles.experience}>
+        <Works />
+        <PersonalProjects />
       </main>
     </>
   );

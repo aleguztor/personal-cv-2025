@@ -1,7 +1,6 @@
 :root {
     font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
     font-weight: 400;
-
     --dark-blue: #223240;
     --dark-blue-transparent: #223240b0;
     --green: #3b8c66;
@@ -29,25 +28,7 @@
     flex-direction: column;
 }
 
-body {
-    min-width: 100vw;
-    min-height: 100vh;
-}
-
 h1 {
     font-size: 3.2em;
     line-height: 1.1;
-}
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button {
-        background-color: #f9f9f9;
-    }
 }
