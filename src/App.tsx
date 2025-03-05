@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styles from "./App.module.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+      <div className={styles.auroraImageContainer} />
+      <header className={styles.personalInfo}>
+        <div className={styles.textPersonalInfoContainer}>
+          <h2>FULL STACK DEVELOPER</h2>
+          <p>Alejandro Guzmán Torres</p>
+        </div>
+        <p className={styles.introduction}>
+          Desarrollador Full Stack con experiencia en el diseño, desarrollo y
+          despliegue de aplicaciones web y móviles, incluyendo CRMs
+          personalizados y proyectos completos desde su concepción hasta su
+          implementación. Especializado en crear soluciones escalables y
+          eficientes, combino habilidades en frontend y backend para ofrecer
+          productos de calidad. Apasionado por la innovación, el aprendizaje
+          continuo y la resolución de desafíos técnicos que aporten valor a los
+          equipos y proyectos en los que participo.
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      </header>
+      <main>
+        <section></section>
+      </main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
