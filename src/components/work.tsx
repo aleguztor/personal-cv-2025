@@ -17,8 +17,9 @@ export function Work({
 }) {
   return (
     <article
-      //   data-aos="fade-right"
-      //   data-aos-easing="ease-in-sine"
+      data-aos="fade-right"
+      data-aos-easing="ease-in-sine"
+      data-aos-offset="200"
       className={styles.workContainer}>
       <img
         src={image}

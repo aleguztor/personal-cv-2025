@@ -55,4 +55,11 @@
 }
 .experience {
     max-width: 130ch;
+    padding-bottom: 150px;
+}
+
+footer {
+    height: 400px;
+    width: 100%;
+    background-color: white;
 }

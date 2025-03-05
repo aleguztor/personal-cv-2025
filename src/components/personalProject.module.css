@@ -1,16 +1,122 @@
 .personalProjectsContainer {
     display: grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
     margin: 20px;
-    .personalProject {
+    position: relative;
+    article {
+        position: relative;
+
+        aspect-ratio: 1/1;
+    }
+    .personalProjectFront {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 5px;
-        height: 200px;
-        background-color: var(--green-transparent);
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-radius: 20px;
+        transition-duration: 300ms;
+        transform: rotate(0deg);
+        transform-origin: top right;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.411),
+            2px 2px var(--dark-green);
+        background: linear-gradient(
+            145deg,
+            rgba(8, 8, 8, 0.548) 0%,
+            var(--green) 100%
+        );
+        backdrop-filter: blur(4px); /* Difumina lo que está detrás */
+        -webkit-backdrop-filter: blur(4px); /* Compatibilidad con Safari */
+        h2,
+        p {
+            text-align: center;
+            padding: 0 10px;
+        }
+        .buttonOpen {
+            cursor: pointer;
+            position: absolute;
+            bottom: 20px;
+            background-color: var(--dark-blue);
+            padding: 10px;
+            border-radius: 15px;
+            left: 20px;
+            border-left: 1px solid white;
+            border-top: 1px solid white;
+            box-shadow: 2px 2px var(--dark-green);
+            font-weight: 600;
+            transition-duration: 100ms;
+        }
+        .buttonOpen:hover {
+            transition-duration: 100ms;
+            background-color: var(--light-green);
+        }
+    }
+    .personalProjectFrontRotated {
+        transition-duration: 300ms;
+        transform: rotate(90deg);
+        border: none;
+        box-shadow: 10px -10px 10px rgba(0, 0, 0, 0.411),
+            2px -2px var(--dark-green);
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
+
+        .buttonOpen {
+            border: none;
+            border-left: 1px solid white;
+            border-bottom: 1px solid white;
+            box-shadow: 2px -2px var(--dark-green);
+            font-weight: 600;
+            transition-duration: 100ms;
+            background-color: rgb(88, 24, 24);
+        }
+        .buttonOpen:hover {
+            transition-duration: 100ms;
+            background-color: var(--light-green);
+            background-color: rgb(131, 37, 37);
+        }
+    }
+
+    .personalProjectBack {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        button {
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            padding: 10px 0;
+            width: 100%;
+            font-weight: 600;
+            color: var(--dark-blue);
+            background-color: var(--light-green);
+        }
+
+        button:hover {
+            background-color: var(--green);
+            color: white;
+        }
     }
 }

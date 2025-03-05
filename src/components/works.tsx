@@ -111,7 +111,7 @@ Git, Jquery, API"
       />
       <Work
         date="MAY 2022 A SEP 2022"
-        company="FREE FREELANCE"
+        company="FREELANCER"
         techs="JavaScript, HTML, CSS, PHP"
         description={
           <>

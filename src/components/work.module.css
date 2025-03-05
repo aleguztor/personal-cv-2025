@@ -4,19 +4,17 @@
     gap: 10px;
     margin: 20px;
     position: relative;
-    background: rgb(255, 255, 255);
     background: linear-gradient(
         145deg,
-        rgba(255, 255, 255, 0.15) 0%,
+        rgba(8, 8, 8, 0.548) 0%,
         var(--green-transparent) 100%
     );
     backdrop-filter: blur(4px); /* Difumina lo que está detrás */
     -webkit-backdrop-filter: blur(4px); /* Compatibilidad con Safari */
     border-radius: 5px;
     padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-right: 1px solid var(--green-transparent);
-    border-bottom: 1px solid var(--dark-green);
+    border-top: 1px solid var(--green-transparent);
+    border-left: 1px solid var(--dark-green);
 
     img {
         width: 100px;

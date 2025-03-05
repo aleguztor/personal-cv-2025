@@ -32,6 +32,7 @@ function App() {
         <Works />
         <PersonalProjects />
       </main>
+      <footer></footer>
     </>
   );
 }
