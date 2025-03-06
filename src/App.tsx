@@ -5,7 +5,10 @@ import linkdinIcon from "./assets/icons/linkdinIcon.png";
 
 import { PersonalProjects } from "./components/PersonalProjects";
 import { Works } from "./components/works";
+import { email } from "./store/personalDat";
+import { calculateTempo } from "./util";
 function App() {
+  const { years, months } = calculateTempo("05-01-2022");
   return (
     <>
       <div className={styles.auroraImageContainer} />
@@ -27,7 +30,24 @@ function App() {
           </p>
         </section>
         <nav>
-          <p>alejandrogtdev@gmail.com</p>
+          <div className={styles.experienceYears}>
+            <div>
+              <div>
+                <p>AÑOS</p>
+                <h3>{years}</h3>
+              </div>
+              <div>
+                <p>MESES</p>
+                <h3>{months}</h3>
+              </div>
+            </div>
+            <p>DE EXPERIENCIA</p>
+          </div>
+          <a
+            href={`mailto:${email}`}
+            content="Enviar correo a Alejandro GT">
+            <p> {email}</p>
+          </a>
           <p>+34 626591157</p>
           <p className={styles.name}>Alejandro Guzmán Torres</p>
 

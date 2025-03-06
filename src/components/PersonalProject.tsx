@@ -1,3 +1,4 @@
+import { PersonalProjectComponent } from "@/interfaces";
 import { useState } from "react";
 import styles from "./personalProject.module.css";
 
@@ -6,21 +7,18 @@ export function PersonalProject({
   description,
   image,
   linkToPage,
-}: {
-  title: string;
-  linkToPage?: string;
-  description?: string;
-  image: string;
-}) {
+  background,
+}: PersonalProjectComponent) {
   const [userOnProject, setUserOnProject] = useState(false);
   return (
     <article data-aos="fade-up">
       <div
+        style={{ background }}
         className={`${styles.personalProjectFront} ${
           userOnProject ? styles.personalProjectFrontRotated : ""
         } `}>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {description ? <p>{description}</p> : null}
         <button
           onClick={() => setUserOnProject(!userOnProject)}
           className={styles.buttonOpen}>
