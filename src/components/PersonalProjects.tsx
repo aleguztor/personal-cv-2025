@@ -43,6 +43,7 @@ export function PersonalProjects() {
         linkToPage="https://github.com/aleguztor/Little_crm_client_lead"
         description="Compuesto de Contactos, oportunnidades y clientes"
       />
+      <div />
       <PersonalProject
         title="CarProject"
         image={GameCarProject}

@@ -3,7 +3,6 @@
     width: 100%;
     height: 100vh;
     z-index: -1;
-    overflow: hidden;
     background: linear-gradient(
             180deg,
             rgba(0, 255, 97, 0) 0%,
@@ -13,6 +12,22 @@
     background-size: cover;
     background-position: top;
     filter: opacity(0.5);
+}
+.fondomarino {
+    position: absolute;
+    width: 100%;
+    height: 200vh;
+    z-index: -1;
+    background: linear-gradient(
+            180deg,
+            rgba(34, 50, 64, 1) 0%,
+            rgba(34, 50, 64, 0) 50%
+        ),
+        url("./assets/fondomarino.webp");
+    background-size: cover;
+    background-position: bottom;
+    filter: opacity(0.5);
+    bottom: 0;
 }
 header {
     display: flex;
@@ -24,56 +39,70 @@ header {
     max-width: 130ch;
     padding: 0px 30px 0 40px;
     nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        a {
-            transition-duration: 200ms;
-            text-decoration: none;
-            background-color: rgb(223, 223, 223);
-            color: var(--dark-green);
-            padding: 4.5px 10px;
-            border-radius: 2px;
-            font-weight: 600;
+        p {
+            text-align: end;
+            margin-bottom: 5px;
         }
-        a:hover {
-            transition-duration: 200ms;
-            background-color: var(--dark-green);
-            color: white;
+        .name {
+            text-align: end;
+            text-transform: uppercase;
+            font-size: 18.2px;
+            margin-bottom: 10px;
         }
-        .buttonIconGithub {
-            cursor: pointer;
-            background-color: transparent;
-            width: 50px;
-            height: 50px;
-            img {
-                padding: 7px;
-                width: 100%;
-                display: block;
-                filter: invert();
+        .containerNavButtons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            a {
+                transition-duration: 200ms;
+                text-decoration: none;
+                background-color: rgb(223, 223, 223);
+                color: var(--dark-green);
+                padding: 4.5px 10px;
+                border-radius: 2px;
+                font-weight: 700;
+                text-transform: uppercase;
             }
-        }
-        .buttonIconLinkedin {
-            cursor: pointer;
-            background-color: transparent;
-            width: 50px;
-            height: 50px;
+            a:hover {
+                transition-duration: 200ms;
+                background-color: var(--dark-green);
+                color: white;
+                filter: drop-shadow(0px 0px 15px rgba(225, 255, 230, 0.378));
+            }
+            .buttonIconGithub {
+                cursor: pointer;
+                background-color: transparent;
+                width: 50px;
+                height: 50px;
+                img {
+                    padding: 7px;
+                    width: 100%;
+                    display: block;
+                    filter: invert();
+                }
+            }
+            .buttonIconLinkedin {
+                cursor: pointer;
+                background-color: transparent;
+                width: 50px;
+                height: 50px;
 
-            img {
-                width: 100%;
-                transition-duration: 200ms;
-                display: block;
-                filter: invert(99%) sepia(100%) saturate(0%) hue-rotate(273deg)
-                    brightness(113%) contrast(101%);
+                img {
+                    width: 100%;
+                    transition-duration: 200ms;
+                    display: block;
+                    filter: invert(99%) sepia(100%) saturate(0%)
+                        hue-rotate(273deg) brightness(113%) contrast(101%);
+                }
             }
-        }
-        .buttonIcon:hover {
-            img {
-                transition-duration: 200ms;
-                filter: invert(67%) sepia(38%) saturate(476%) hue-rotate(88deg)
-                    brightness(92%) contrast(90%)
-                    drop-shadow(0px 0px 15px rgba(225, 255, 230, 0.678));
+            .buttonIcon:hover {
+                img {
+                    transition-duration: 200ms;
+                    filter: invert(67%) sepia(38%) saturate(476%)
+                        hue-rotate(88deg) brightness(92%) contrast(90%)
+                        drop-shadow(0px 0px 15px rgba(225, 255, 230, 0.678));
+                }
             }
         }
     }
@@ -86,13 +115,6 @@ header {
     width: 100%;
 
     .textPersonalInfoContainer {
-        width: 100%;
-
-        display: flex;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        gap: 20px;
-        justify-content: space-between;
         margin-bottom: 20px;
 
         h2 {
@@ -104,24 +126,32 @@ header {
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        p {
-            text-transform: uppercase;
-            margin-bottom: -5px;
-            font-size: 20px;
-            width: 160px;
-        }
     }
     .introduction {
         font-weight: 100;
     }
 }
 .experience {
+    position: relative;
     max-width: 130ch;
     padding-bottom: 150px;
+    > h1 {
+        font-size: 40px;
+        margin-top: 50px;
+        text-align: center;
+        color: white;
+        /* text-shadow: 2px 2px 10px var(--light-green); */
+    }
 }
 
 footer {
-    height: 400px;
+    height: 150px;
     width: 100%;
-    background-color: white;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
