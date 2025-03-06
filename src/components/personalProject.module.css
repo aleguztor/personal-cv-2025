@@ -1,6 +1,5 @@
 .personalProjectsContainer {
     display: grid;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 25px;
     grid-row-gap: 25px;
@@ -8,7 +7,6 @@
     position: relative;
     article {
         position: relative;
-
         aspect-ratio: 1/1;
     }
     .personalProjectFront {
@@ -116,6 +114,45 @@
         button:hover {
             background-color: var(--green);
             color: white;
+        }
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .personalProjectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .personalProjectsContainer {
+        grid-template-columns: repeat(2, 1fr);
+        .personalProjectFront {
+            justify-content: start;
+            gap: 5px;
+            h2 {
+                font-size: 15px;
+                margin-top: 25px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 400px) {
+    .personalProjectsContainer {
+        grid-template-columns: repeat(1, 1fr);
+        .personalProjectFront {
+            justify-content: center;
+            gap: 2px;
+            h2 {
+                font-size: 20px;
+                margin-top: 0;
+            }
+            p {
+                font-size: 12px;
+            }
         }
     }
 }

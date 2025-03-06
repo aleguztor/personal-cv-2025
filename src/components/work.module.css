@@ -72,3 +72,13 @@
         }
     }
 }
+
+@media only screen and (max-width: 520px) {
+    .workContainer {
+        img {
+            display: none;
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
